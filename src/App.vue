@@ -1,15 +1,19 @@
 <template>
-  <MyComponent/>
+<!--  <MyComponent/>-->
+  <FullBoxComponent/>
 </template>
-
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import MyComponent from "@/components/MyComponent";
+// import MyComponent from "@/components/MyComponent";
+
+
+import FullBoxComponent from "@/components/FullBoxComponent";
 
 export default {
   name: 'App',
   components: {
-    MyComponent
+    // MyComponent
+    FullBoxComponent
   }
 }
 </script>
