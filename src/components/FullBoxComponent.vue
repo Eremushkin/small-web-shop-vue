@@ -1,7 +1,7 @@
 <!-- FullBoxComponent.vue -->
 
 <template>
-  <div class="full-box" :style="{ width: boxWidth + 'px', height: boxHeight + 'px' }">
+  <div class="full-box" >
     <p>Ширина: {{ boxWidth }}px</p>
     <p>Высота: {{ boxHeight }}px</p>
   </div>

@@ -5,16 +5,19 @@
 
     <!-- Белое тело -->
     <div class="body">
-      <p>Текст или содержимое вашего компонента...</p>
-      <pre>{{telegramWebAppValue}}</pre>
-      <button class="close-web-app-button" @click="handleButtonClick">Закрыть</button>
+      <FullBoxComponent/>
+<!--      <p>Текст или содержимое вашего компонента...</p>-->
+<!--      <pre>{{telegramWebAppValue}}</pre>-->
+<!--      <button class="close-web-app-button" @click="handleButtonClick">Закрыть</button>-->
     </div>
   </div>
 </template>
 
 <script>
+import FullBoxComponent from "@/components/FullBoxComponent";
 export default {
   name: 'MyComponent',
+  components: {FullBoxComponent},
   methods: {
     handleButtonClick() {
       console.log("Close click")
