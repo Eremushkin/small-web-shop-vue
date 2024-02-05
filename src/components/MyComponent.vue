@@ -5,29 +5,32 @@
 
     <!-- Белое тело -->
     <div class="body">
-      <FullBoxComponent/>
-<!--      <p>Текст или содержимое вашего компонента...</p>-->
-<!--      <pre>{{telegramWebAppValue}}</pre>-->
-<!--      <button class="close-web-app-button" @click="handleButtonClick">Закрыть</button>-->
+      <!--      <FullBoxComponent/>-->
+      <!--      <p>Текст или содержимое вашего компонента...</p>-->
+      <!--      <pre>{{telegramWebAppValue}}</pre>-->
+      <!--      <button class="close-web-app-button" @click="handleButtonClick">Закрыть</button>-->
+      <GenericProductList>
+        <LocalIncrementProductCard/>
+        <LocalIncrementProductCard/>
+        <LocalIncrementProductCard/>
+        <LocalIncrementProductCard/>
+        <LocalIncrementProductCard/>
+      </GenericProductList>
     </div>
   </div>
 </template>
 
 <script>
-import FullBoxComponent from "@/components/FullBoxComponent";
+// import FullBoxComponent from "@/components/FullBoxComponent";
+import LocalIncrementProductCard from '@/components/LocalIncrementProductCard.vue';
+import GenericProductList from "@/components/GenericProductList";
+
 export default {
   name: 'MyComponent',
-  components: {FullBoxComponent},
-  methods: {
-    handleButtonClick() {
-      console.log("Close click")
-      window.Telegram.WebApp.close();
-    }
-  },
-  data() {
-    return {
-      telegramWebAppValue: null,
-    };
+  components: {
+    // FullBoxComponent,
+    GenericProductList,
+    LocalIncrementProductCard
   },
   created() {
     // При монтировании компонента получаем значение из window.Telegram.WebApp
@@ -36,6 +39,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 /* Стили для компонента */
@@ -54,6 +58,7 @@ export default {
 
 .body {
   flex: 1; /* Занимает оставшееся свободное пространство внутри компонента */
+  /*width: 450px;*/
   background-color: var(--tg-theme-bg-color);
   padding: 1em;
 }
