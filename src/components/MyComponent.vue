@@ -28,8 +28,8 @@ export default {
   },
   mounted() {
     // При монтировании компонента получаем значение из window.Telegram.WebApp
-    // this.telegramWebAppValue = window.Telegram && window.Telegram.WebApp;
-    this.telegramWebAppValue = "Text tett tet tett etet ";
+    this.telegramWebAppValue = window.Telegram && window.Telegram.WebApp;
+    // this.telegramWebAppValue = "Text tett tet tett etet ";
   },
 };
 </script>
