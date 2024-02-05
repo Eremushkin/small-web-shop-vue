@@ -26,9 +26,9 @@ export default {
       telegramWebAppValue: null,
     };
   },
-  mounted() {
+  created() {
     // При монтировании компонента получаем значение из window.Telegram.WebApp
-    this.telegramWebAppValue = window.Telegram && window.Telegram.WebApp;
+    this.telegramWebAppValue = window.Telegram && window.Telegram.WebApp.initDataUnsafe.query_id;
     // this.telegramWebAppValue = "Text tett tet tett etet ";
   },
 };
