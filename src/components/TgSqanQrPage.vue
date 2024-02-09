@@ -22,12 +22,12 @@ export default {
   methods: {
     handleScanQR() {
       console.log('QR code scan initiated');
-      // window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (data) => {
-      //   console.log(data)
-      //   this.scanResult = data
-      //   return true;
-      // })
-      this.scanResult = "123"
+      window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (data) => {
+        console.log(data)
+        this.scanResult = data
+        return true;
+      })
+      // this.scanResult = "123"
     }
   }
 }
