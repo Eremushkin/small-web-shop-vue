@@ -1,13 +1,14 @@
 <template>
-  <TgSqanQrPage/>
+<!--  <TgSqanQrPage/>-->
+  <ExchangeForm/>
 </template>
 
 
 <script>
-import TgSqanQrPage from "@/components/TgSqanQrPage";
+import ExchangeForm from "@/components/ExchangeForm";
 export default {
   name: 'App',
-  components: {TgSqanQrPage},
+  components: {ExchangeForm},
   data() {
   },
   setup() {
@@ -24,7 +25,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: black;
+  /*background: black;*/
 }
 
 .item {
