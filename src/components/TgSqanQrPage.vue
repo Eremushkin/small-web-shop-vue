@@ -2,7 +2,7 @@
   <div class="qr-scan-page">
     <h1>Scan Result</h1>
     <h2>{{scanResult.value}}</h2>
-    <s>{{params.value}}</s>
+    <label>{{params.value}}</label>
     <button @click="handleScanQR">SCAN QR</button>
   </div>
 </template>>
@@ -19,10 +19,10 @@ export default {
   methods: {
     handleScanQR() {
       console.log('QR code scan initiated');
-      window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (params) => {
-        console.log(params)
-        this.params.value = params
-        this.scanResult.value = params[0]
+      window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (data) => {
+        console.log(data)
+        this.params.value = data
+        this.scanResult.value = data
         return true;
       })
     }
