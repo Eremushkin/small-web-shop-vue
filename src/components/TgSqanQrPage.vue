@@ -19,7 +19,7 @@ export default {
       console.log('QR code scan initiated');
       window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (data) => {
         console.log(data)
-        this.scanResult.value = data
+        // this.scanResult.value = data[0]
         return true;
       })
     }
