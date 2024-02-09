@@ -11,7 +11,7 @@ import {ref} from "vue";
 
 export default {
   setup() {
-    const scanResult = ref("")
+    const scanResult = ref([])
     return {scanResult}
   },
   methods: {
@@ -20,7 +20,7 @@ export default {
       window.Telegram.WebApp.showScanQrPopup({"text": "Scan any QR"}, (data) => {
         console.log(data)
         this.scanResult.value = data
-        window.Telegram.WebApp.closeScanQrPopup()
+        // window.Telegram.WebApp.closeScanQrPopup()
         return true;
       })
     }
